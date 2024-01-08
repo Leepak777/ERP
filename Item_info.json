@@ -1,0 +1,106 @@
+{
+  "123456": [
+    [
+      "item",
+      "Laptop"
+    ],
+    [
+      "Price",
+      "1200.00"
+    ],
+    [
+      "Quantity",
+      "0"
+    ],
+    [
+      "Description",
+      "High-performance laptop"
+    ],
+    [
+      "StorageLocation",
+      "Warehouse A"
+    ],
+    [
+      "Status",
+      "Out of Stock"
+    ]
+  ],
+  "789012": [
+    [
+      "item",
+      "Smartphone"
+    ],
+    [
+      "Price",
+      "500.00"
+    ],
+    [
+      "Quantity",
+      "10"
+    ],
+    [
+      "Description",
+      "Latest smartphone model"
+    ],
+    [
+      "StorageLocation",
+      "Warehouse B"
+    ],
+    [
+      "Status",
+      "In stock"
+    ]
+  ],
+  "345678": [
+    [
+      "item",
+      "Headphones"
+    ],
+    [
+      "Price",
+      "80.00"
+    ],
+    [
+      "Quantity",
+      "20"
+    ],
+    [
+      "Description",
+      "Noise-canceling headphones"
+    ],
+    [
+      "StorageLocation",
+      "Warehouse C"
+    ],
+    [
+      "Status",
+      "In stock"
+    ]
+  ],
+  "901234": [
+    [
+      "item",
+      "Tablet"
+    ],
+    [
+      "Price",
+      "300.00"
+    ],
+    [
+      "Quantity",
+      "8"
+    ],
+    [
+      "Description",
+      "10-inch tablet"
+    ],
+    [
+      "StorageLocation",
+      "Warehouse A"
+    ],
+    [
+      "Status",
+      "In stock"
+    ]
+  ]
+}
