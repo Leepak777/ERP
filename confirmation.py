@@ -62,16 +62,23 @@ def get_customer_email(customer):
         customers = json.load(file)
     return customers[customer][0][1]
 
-def calculate_total_price(customer):
+def calculate_total_price(order_num):
     with open("order_info.json", "r", encoding="utf-8") as order_file:
         orders = json.load(order_file)
-    
-    with open("item_info.json", "r", encoding="utf-8") as item_file:
+    with open("Item_info.json", "r", encoding="utf-8") as item_file:
         items = json.load(item_file)
-    total_price = 0
-    for code, quantity in orders[customer].items():
-        price = items[code][1][1]
-        total_price += float(price) * float(quantity)
+    if order_num not in orders:
+        return 0.0
+    total_price = 0.0
+    for code, quantity in orders[order_num].items():
+        if code not in items:
+            continue
+        try:
+            qty = float(quantity)
+        except (TypeError, ValueError):
+            continue
+        price = float(items[code][1][1])
+        total_price += price * qty
     return total_price
 
 def main():
@@ -84,7 +91,7 @@ def main():
             print("Here are your orders:")
             print(list_order(num))
             name = order_name(num)
-            confirmation = input("confirm payment?(yse/no)").lower()
+            confirmation = input("confirm payment?(yes/no)").lower()
             if confirmation =="yes":
                 setStatus(num, "confirmed payment")
                 invoice_name =f"{name}_Invoice.pdf"

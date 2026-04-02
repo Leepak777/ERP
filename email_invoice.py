@@ -1,6 +1,5 @@
-import json
+import os
 import smtplib
-from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 from reportlab.lib.pagesizes import letter
@@ -38,8 +37,14 @@ def generate_invoice_pdf(number, customer, items, pdf_filename):
     c.save()
 
 def send_invoice_email(customer, email, pdf_filename):
-    sender_email = 'lpsa732@gmail.com'  # Replace with your Gmail email address
-    sender_password = 'dypn ibwj loiy xyxp'  # Replace with your Gmail password
+    sender_email = os.environ.get("ERP_SMTP_EMAIL", "").strip()
+    sender_password = os.environ.get("ERP_SMTP_PASSWORD", "").strip()
+    if not sender_email or not sender_password:
+        print(
+            "Skipping email: set ERP_SMTP_EMAIL and ERP_SMTP_PASSWORD "
+            "(see .env.example). PDF saved locally."
+        )
+        return
 
     message = MIMEMultipart()
     message['From'] = sender_email

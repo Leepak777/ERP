@@ -46,5 +46,5 @@ def CheckStorage():
     with open("order_info.json", "w", encoding="utf-8") as file:
         json.dump(order_lst, file, ensure_ascii=False, indent=2)
 
-# Call the function to check storage and update information
-CheckStorage()
+if __name__ == "__main__":
+    CheckStorage()

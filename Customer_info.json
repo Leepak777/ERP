@@ -1,34 +1,11 @@
 {
-  "arthur": [
-    [
-      "Email",
-      "lpsa732@gmail.com"
-    ],
-    [
-      "Billing Address",
-      "pog"
-    ],
-    [
-      "Shipping Address",
-      "pog"
-    ],
-    [
-      "Credit Card Number",
-      "pog"
-    ],
-    [
-      "CVC",
-      "pog"
-    ],
-    [
-      "Order",
-      {
-        "123456": "5"
-      }
-    ],
-    [
-      "Confirm",
-      false
-    ]
+  "Jane Demo": [
+    ["Email", "jane.demo@example.com"],
+    ["Billing Address", "123 Sample St, Demo City"],
+    ["Shipping Address", "123 Sample St, Demo City"],
+    ["Credit Card Number", "0000000000000000"],
+    ["CVC", "000"],
+    ["Order", { "123456": "2" }],
+    ["Confirm", false]
   ]
 }
